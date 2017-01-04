@@ -3,8 +3,8 @@ require 'spec_helper'
 describe Chargify::Referral, :fake_resource do
   context '.validate' do
     before do
-      FakeWeb.register_uri(:get, "#{test_domain}/referral_codes/validate.json?code=foobar123", :body => 'hello')
-      FakeWeb.register_uri(:get, "#{test_domain}/referral_codes/validate.json?code=fake", :status => ["404", "Not Found"])
+      FakeWeb.register_uri(:get, "#{test_domain}/referral_codes/validate.xml?code=foobar123", :body => 'hello')
+      FakeWeb.register_uri(:get, "#{test_domain}/referral_codes/validate.xml?code=fake", :status => ["404", "Not Found"])
     end
 
     it 'returns true if the referral_code is valid' do
