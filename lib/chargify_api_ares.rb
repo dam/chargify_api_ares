@@ -28,6 +28,7 @@ require 'chargify_api_ares/resources/invoice'
 require 'chargify_api_ares/resources/customer_metafield'
 require 'chargify_api_ares/resources/subscription_metafield'
 require 'chargify_api_ares/resources/allocation'
+require 'chargify_api_ares/resources/referral'
 
 require 'active_resource/version'
 if defined?(::ActiveResource::VERSION::MAJOR) &&
